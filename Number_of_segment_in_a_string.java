@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Number_of_segment_in_a_string {
