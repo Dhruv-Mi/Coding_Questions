@@ -36,9 +36,9 @@ public class Positions_of_large_groups {
         Scanner sc=new Scanner(System.in);
         String s= sc.next();
         ArrayList<ArrayList<Integer>> ans=largeGroupPositions(s);
-        for(int i=0;i<ans.size();i++){
-            for(int j=0;j<2;j++){
-                System.out.print(ans.get(i).get(j) +" ");
+        for (ArrayList<Integer> an : ans) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(an.get(j) + " ");
             }
             System.out.println();
         }
