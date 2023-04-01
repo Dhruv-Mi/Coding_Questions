@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class Remove_outermost_parenthesis {
     public static String removeOuterParenthesis(String s){
-        String ans="";
+        StringBuilder ans= new StringBuilder();
         Stack<Character> st=new Stack<>();
         for(int i=0;i<s.length();i++){
             char ch=s.charAt(i);
@@ -14,7 +14,7 @@ public class Remove_outermost_parenthesis {
             }
             else if(ch==')'){
                 if(st.size()>1){
-                    ans=ans+ch;
+                    ans.append(ch);
                     st.pop();
                 }
                 else{
@@ -23,10 +23,10 @@ public class Remove_outermost_parenthesis {
             }
             else{
                 st.add('(');
-                ans=ans+'(';
+                ans.append('(');
             }
         }
-        return ans;
+        return ans.toString();
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
