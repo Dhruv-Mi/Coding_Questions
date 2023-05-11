@@ -23,8 +23,8 @@ public class Final_prices_with_a_special_discount_in_a_shop {
             prices[i]= sc.nextInt();
         }
         int[] ans=finalPrices(prices);
-        for(int i=0;i<ans.length;i++){
-            System.out.print(ans[i]+" ");
+        for (int an : ans) {
+            System.out.print(an + " ");
         }
     }
 }
