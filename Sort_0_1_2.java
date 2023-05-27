@@ -6,14 +6,12 @@ public class Sort_0_1_2{
     public static void sort012(int[] arr){
         int len= arr.length;
         int val0=0,val1=0,val2=0;
-        for(int i=0;i<len;i++){
-            if(arr[i]==0){
+        for (int k : arr) {
+            if (k == 0) {
                 val0++;
-            }
-            else if(arr[i]==1){
+            } else if (k == 1) {
                 val1++;
-            }
-            else{
+            } else {
                 val2++;
             }
         }
