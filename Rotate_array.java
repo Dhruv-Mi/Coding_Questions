@@ -4,33 +4,23 @@ import java.util.Scanner;
 
 public class Rotate_array {
     public static void rotate(int[] arr,int d){
-        int len= arr.length;
-        int index=0;
-        int check=0;
-        for(int i=0;i<len;i++){
-            if(arr[i]==d){
-                index=i+1;
-                check=1;
-                break;
-            }
+        int[] first=new int[d];
+        int[] second=new int[arr.length-d];
+        for(int i=0;i< d;i++){
+            first[i]=arr[i];
         }
-        if(index!=0&&check==1){
-            int[] temp=new int[len];
-            int k=0;
-            for(int i=index;i<len;i++){
-                temp[k]=arr[i];
-                k++;
-            }
-            for(int j=0;j<index;j++){
-                temp[k]=arr[j];
-                k++;
-            }
-            for(int z=0;z<len;z++) {
-                arr[z] = temp[z];
-            }
+        int j=0;
+        for(int i=d;i< arr.length;i++){
+            second[j]=arr[i];
+            j++;
         }
-        else{
-            return;
+        for(int i=0;i< second.length;i++){
+            arr[i]=second[i];
+        }
+        j=0;
+        for(int i= second.length;i<arr.length;i++){
+            arr[i]=first[j];
+            j++;
         }
     }
     public static void main(String[] args) {
